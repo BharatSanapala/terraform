@@ -1,4 +1,4 @@
-resorce "aws_instance" "myserver" {
+resource "aws_instance" "myserver" {
     tags = {
         Name = "bharat"
         env = "dev"
