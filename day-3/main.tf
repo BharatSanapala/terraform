@@ -7,6 +7,9 @@ resource "aws_instance" "terraform-instance" {
     instance_type = "t3.micro"
     availability_zone = "ap-south-1a"
     key_name = "mumbai_kops"
+
+    vpc_security_group_ids = [aws_security_group.mysg.id] 
+
     root_block_device {
         volume_size = 10  
     }
