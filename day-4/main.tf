@@ -1,10 +1,10 @@
 provider "aws" {
     region = "ap-south-1"
-    alias = mumbai
+    alias = "mumbai"
 }
 
 resource "aws_instance" "my-instance" {
-    provider = mumbai
+    provider = "aws.mumbai"
     name = "my-ec2"
     ami_id = "ami-0d351f1b760a30161"
     tags = {
