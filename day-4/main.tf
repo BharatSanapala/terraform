@@ -1,5 +1,5 @@
 resource "aws_instance" "my-instance" {
-    provider = "aws.bombay"
+    provider = aws.bombay
     ami = "ami-0d351f1b760a30161"
     tags = {
         env = "dev"
@@ -17,7 +17,8 @@ resource "aws_instance" "my-instance" {
 
 resource "aws_security_group" "my_sg" {
 
-    name = "terraform SG"
+    name = "terraform_SG"
+    provider = aws.bombay
 
     ingress {
         from_port = 80
