@@ -1,8 +1,3 @@
-provider "aws" {
-    region = "ap-south-1"
-    alias = "bombay"
-}
-
 resource "aws_instance" "my-instance" {
     provider = "aws.bombay"
     ami = "ami-0d351f1b760a30161"
