@@ -1,8 +1,7 @@
 
 resource "aws_instance" "my-instance" {
     provider = "aws.bombay"
-    name = "my-ec2"
-    ami_id = "ami-0d351f1b760a30161"
+    ami = "ami-0d351f1b760a30161"
     tags = {
         env = "dev"
     }
@@ -10,7 +9,7 @@ resource "aws_instance" "my-instance" {
     key_name = "mumbai_kops"
     availability_zone = "ap-south-1a"
     count = 1
-    security_group = ""
+    security_groups = ""
     root_block_device {
         volume_size = 10
     }
