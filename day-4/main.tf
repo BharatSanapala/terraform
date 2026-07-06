@@ -8,7 +8,7 @@ resource "aws_instance" "my-instance" {
     key_name = "mumbai_kops"
     availability_zone = "ap-south-1a"
     count = 1
-    security_groups = "my_sg"
+    vpc_security_group_ids = [aws_security_group.my_sg.id]
     root_block_device {
         volume_size = 10
     }
