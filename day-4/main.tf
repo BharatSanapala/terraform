@@ -2,7 +2,7 @@ resource "aws_instance" "my-instance" {
     provider = aws.bombay
 
     lifecycle {
-        create_before_destory = true
+        create_before_destroy = true
     }
 
     ami = "ami-0d351f1b760a30161"
